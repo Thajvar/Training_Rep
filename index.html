@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="Stylesheet" href="styles.css"/>
+</head>
+
+<body>
+<div id="wrapper">
+    <h2>Fahrenheit to Celsius and Celsius Fahrenheit</h2>
+    <div class="inputdiv">
+        <input type="text" id="input" placeholder=" Faren or Cel Value">
+    </div>
+    <div>
+        <button type="submit" onclick="Fahrenheit()">Convert Fahrenheit</button>
+        <button type="submit" onclick="Celsius()">Convert to Celsius</button>
+    </div>
+    <div id="result">
+
+    </div>
+<div>
+<script>
+function Fahrenheit() {
+let cmVal = Number(document.getElementById('input').value)
+let inchVal = (9/5) * cmVal + 32;
+let result = document.getElementById('result')
+result.innerHTML = inchVal;
+}
+
+function Celsius() {
+let cmVal = Number(document.getElementById('input').value)
+let inchVal = (5/9)* (cmVal - 32);
+let result = document.getElementById('result')
+result.innerHTML = inchVal;
+}
+
+
+</script>
+</body>
+</html>
